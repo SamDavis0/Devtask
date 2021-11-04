@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.membership.hasMany(models.projects, {foreignKey: 'project_id'})
+      models.projects.hasMany(models.memberships, {foreignKey: 'project_id'})
       models.tasks.belongsTo(models.projects, {foreignKey: 'project_id'})
     }
   };
