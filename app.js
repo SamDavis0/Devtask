@@ -3,7 +3,7 @@ const app = express();
 const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-require('./auth/passport-config')(passport);
+// require('./auth/passport-config')(passport);
 const port = 3000;
 
 app.use(express.static('public'));
