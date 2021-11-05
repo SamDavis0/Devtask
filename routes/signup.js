@@ -32,6 +32,8 @@ router.post('/signup_login', async (req, res) => {
             password: password
         })
 
+
+
         res.redirect('/signup_login')
     } catch (error) {
         console.log(error);
