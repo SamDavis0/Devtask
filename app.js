@@ -23,7 +23,16 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //routes 
+
+// app.use(require('./routes/indextest.js'))
+// app.use(require('./routes/logintest.js'))
+// app.use(require('./routes/registertest.js'))
+
+
 app.use(require('./routes/index.js'))
+app.use(require('./routes/login.js'))
+app.use(require('./routes/projects.js'))
+app.use(require('./routes/signup.js'))
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
