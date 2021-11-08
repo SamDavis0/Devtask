@@ -1,29 +1,44 @@
+const signup = document.querySelector('#signup');
+const login = document.querySelector('#login');
+
+$(document).ready(function () {
+  $(signup).click(function () {
+    $('#signup-form').show();
+    $('#login-form').hide();
+  });
+
+  $(login).click(function () {
+    $('#signup-form').hide();
+    $('#login-form').show();
+  });
+});
+
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
   var $this = $(this),
-      label = $this.prev('label');
+    label = $this.prev('label');
 
-	  if (e.type === 'keyup') {
-			if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-    	if( $this.val() === '' ) {
-    		label.removeClass('active highlight');
-			} else {
-		    label.removeClass('highlight');
-			}
-    } else if (e.type === 'focus') {
-
-      if( $this.val() === '' ) {
-    		label.removeClass('highlight');
-			}
-      else if( $this.val() !== '' ) {
-		    label.addClass('highlight');
-			}
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
     }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    }
+    else if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
 });
 
 

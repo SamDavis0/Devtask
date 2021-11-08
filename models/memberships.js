@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.users.belongsTo(models.memberships, {foreignKey: 'user_id'})
-      models.projects.belongsTo(models.memberships, {foreignKey: 'project_id'})
+      models.memberships.belongsTo(models.users, {foreignKey: 'user_id'})
+      models.memberships.belongsTo(models.projects, {foreignKey: 'project_id'})
     }
   };
   memberships.init({

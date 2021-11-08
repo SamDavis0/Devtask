@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       models.projects.hasMany(models.memberships, {foreignKey: 'project_id'})
-      models.tasks.belongsTo(models.projects, {foreignKey: 'project_id'})
+      models.projects.hasMany(models.tasks, {foreignKey: 'project_id'})
     }
   };
   projects.init({
