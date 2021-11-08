@@ -7,13 +7,14 @@ const db = require('../models');
 router.use('/public', express.static(__dirname + '/public'));
 
 
-router.get('/projects', auth, (req, res) => {
+
+router.get('/projects', auth, async (req, res) => {
     try {
 
-        let projects = db.projects.findAll();
+        let projects = await db.projects.findAll();
+        let tasks = await db.tasks.findAll();
 
-
-
+        console.log(projects.name);
         // await db.projects.get({
         //     project_name: project_name,
         //     description: description
@@ -28,9 +29,10 @@ router.get('/projects', auth, (req, res) => {
         res.render('projects', {
             error: "error: can't register this username",
             title: "Express",
-            projects: JSON.stringify(projects)
+            projects: projects,
+            tasks: tasks
         })
-        console.log(JSON.stringify(projects));
+        // console.log(JSON.stringify(projects));
     } catch (error) {
         console.log(error);
     }
