@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='public/css/cards.css'>
-    <title>Document</title>
+    <link rel='stylesheet' href='public/css/projects.css'>
+
+    <title>Projects</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <main class='project'>
             <div class='project-info'>
-                <h1>Homepage Design</h1>
+                <h1><%= projects[0].project_name %> </h1>
                 <div class='project-members'>
                     <span></span>
                     <span></span>
@@ -20,80 +21,32 @@
                 </div>
             </div>
             <div class='project-tasks'>
-                <div class='project-column'>
+                <div class='project-column dropzone vh-100' id="todo">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>To Do</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
                     </div>
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--python'>Python</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
+                    <% for (let i = 0; i < tasks.length; i++) { %>
+                        <div class='task' draggable='true'>
+                            <div class='task__tags'><span class='task__tag task__tag--html'><%=  %> </span>
+                                <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                            <p><%= tasks[i].description %> </p>
+                            <div class='task__stats'>
+                                <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
+                                <span><i class="fas fa-comment"></i>4</span>
+                                <span><i class="fas fa-paperclip"></i>8</span>
+                                <span class='task__owner'></span>
+                            </div>
                         </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quasi eum dolorem facilis a tempore, laboriosam obcaecati modi, debitis ducimus saepe. Deleniti rerum itaque iure veniam totam! Ducimus, ut debitis?</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>3</span>
-                            <span><i class="fas fa-paperclip"></i>7</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
+                    <% } %> 
 
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--css'>CSS</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel labore in itaque aperiam omnis placeat, doloremque exercitationem dolores perspiciatis voluptatibus facere. Animi perspiciatis at blanditiis quasi accusantium magnam aperiam vel?</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>2</span>
-                            <span><i class="fas fa-paperclip"></i>5</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--python'>Python</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In vero blanditiis libero labore deleniti, quaerat eaque rerum, porro quis iusto, ipsa cum totam dolorem eum! Possimus deserunt pariatur distinctio est?</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>2</span>
-                            <span><i class="fas fa-paperclip"></i>3</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div class='project-column'>
+                <div class='project-column dropzone' id="inprogress">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>In Progress</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--css'>CSS</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet obcaecati sapiente natus placeat error, quia numquam dicta est quasi suscipit inventore cumque velit, temporibus ad beatae! Necessitatibus corporis dolores odit!</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>5</span>
-                            <span><i class="fas fa-paperclip"></i>5</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--html'>HTML</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae illo maiores voluptatem culpa totam ad consectetur recusandae ullam dicta consequuntur architecto, vel ipsam laborum aut nostrum itaque quod! Omnis, quos.</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>8</span>
-                            <span><i class="fas fa-paperclip"></i>7</span>
-                            <span class='task__owner'></span>
-                        </div>
                     </div>
 
                     <div class='task' draggable='true'>
@@ -123,54 +76,28 @@
                     </div>
 
                 </div>
-
-                <div class='project-column'>
+                <div class='project-column dropzone' id="done">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>Done</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
                     </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--html'>CSS</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem inventore tempore aperiam, aliquam dolor minima harum, consequatur eveniet esse aut vitae ab doloremque illo enim et tempora at incidunt facilis?</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>12</span>
-                            <span><i class="fas fa-paperclip"></i>5</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--html'>CSS</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae atque amet ipsam repellendus, voluptates voluptas voluptatem commodi, quidem nesciunt inventore mollitia provident! Ab alias distinctio pariatur dolor est expedita error.</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>3</span>
-                            <span><i class="fas fa-paperclip"></i>7</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--python'>Python</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum impedit temporibus earum, deleniti dolores itaque tempore porro odio ex vel, suscipit laboriosam maiores sint voluptatum aliquid ab excepturi id quidem!</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>8</span>
-                            <span><i class="fas fa-paperclip"></i>16</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
                 </div>
+                <div class='project-column dropzone' id="newcard">
+                    <div><h1>Create Task</h1>
+                        <form>
+                            <div class="input-group">
+                                <textarea name="task" class="form-control"
+                                placeholder="Enter todo item" 
+                                aria-label="With textarea"></textarea>
 
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary h-100" type="submit"
+                                        id="button-addon2">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
         <aside class='task-details'>
@@ -227,6 +154,7 @@
             </div>
         </aside>
     </div>
-
+    <script src="public/js/movingcards.js"></script>
+    <script src="public/js/card.js"></script>
 </body>
 </html>

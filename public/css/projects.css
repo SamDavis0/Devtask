@@ -301,3 +301,13 @@ h1{
     font-size: 25px;
   }
 }
+
+.index15{
+  z-index: 15;
+}
+.index10{
+  z-index: 10;
+}
+.index5{
+  z-index: 5;
+}
