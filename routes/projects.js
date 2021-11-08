@@ -4,6 +4,7 @@ const auth = require('../auth');
 const db = require('../models');
 
 
+router.use('/public', express.static(__dirname + '/public'));
 
 
 router.get('/projects', auth, (req, res) => {

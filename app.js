@@ -30,9 +30,8 @@ app.use(passport.session())
 
 
 app.use(require('./routes/index.js'))
-app.use(require('./routes/login.js'))
+app.use(require('./routes/login_signup.js'))
 app.use(require('./routes/projects.js'))
-app.use(require('./routes/signup.js'))
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
