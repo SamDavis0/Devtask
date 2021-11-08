@@ -39,7 +39,7 @@ router.post('/login_signup', async (req, res) => {
     });
     
     
-    res.redirect('/login_signup');
+    res.redirect('/projects');
   } catch (error) {
     console.log(error);
     res.render('index', {
