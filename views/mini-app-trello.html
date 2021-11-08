@@ -30,27 +30,31 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-133433427-1');
-</script>
+        gtag('config', 'UA-133433427-1');
+    </script>
 
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '327167911228268');
-  fbq('track', 'PageView');
-</script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=327167911228268&ev=PageView&noscript=1" /></noscript>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '327167911228268');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=327167911228268&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 
 
@@ -90,14 +94,16 @@
 
                         <!-- Navbar toggler -->
 
-                        <button class="navbar-toggler navbar-toggler-custom navbar-toggler-right d-block" type="button" data-toggle="sidebar">
+                        <button class="navbar-toggler navbar-toggler-custom navbar-toggler-right d-block" type="button"
+                            data-toggle="sidebar">
                             <span class="material-icons">apps</span>
                         </button>
 
 
                         <!-- Navbar Brand -->
                         <a href="mini-dashboard.html" class="navbar-brand ">
-                            <img class="navbar-brand-icon" src="assets/images/stack-logo-white.svg" width="22" alt="Stack">
+                            <img class="navbar-brand-icon" src="assets/images/stack-logo-white.svg" width="22"
+                                alt="Stack">
                             <span>Stack</span>
                         </a>
 
@@ -108,7 +114,8 @@
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dashboards</a>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="mini-dashboard.html">Default</a>
-                                        <a class="dropdown-item" href="mini-dashboard-quick-access.html">Quick Access</a>
+                                        <a class="dropdown-item" href="mini-dashboard-quick-access.html">Quick
+                                            Access</a>
                                         <a class="dropdown-item" href="mini-staff.html">CRM/Staff</a>
                                         <a class="dropdown-item" href="mini-analytics.html">E-commerce Analytics</a>
                                     </div>
@@ -169,7 +176,8 @@
                                         <a class="dropdown-item" href="app-trello.html">Default</a>
                                         <a class="dropdown-item" href="fluid-app-trello.html">Full Width Navs</a>
                                         <a class="dropdown-item" href="fixed-app-trello.html">Fixed Navs</a>
-                                        <a class="dropdown-item active" href="mini-app-trello.html">Mini Sidebar + Navs</a>
+                                        <a class="dropdown-item active" href="mini-app-trello.html">Mini Sidebar +
+                                            Navs</a>
                                     </div>
                                 </li>
                             </ul>
@@ -192,10 +200,12 @@
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#notifications_menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <a href="#notifications_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    data-caret="false">
                                     <i class="material-icons nav-icon navbar-notifications-indicator">notifications</i>
                                 </a>
-                                <div id="notifications_menu" class="dropdown-menu dropdown-menu-right navbar-notifications-menu">
+                                <div id="notifications_menu"
+                                    class="dropdown-menu dropdown-menu-right navbar-notifications-menu">
                                     <div class="dropdown-item d-flex align-items-center py-2">
                                         <span class="flex navbar-notifications-menu__title m-0">Notifications</span>
                                         <a href="javascript:void(0)" class="text-muted"><small>Clear all</small></a>
@@ -206,7 +216,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
+                                                            alt="Avatar" class="avatar-img rounded-circle">
                                                     </div>
                                                 </div>
                                                 <div class="flex">
@@ -217,8 +228,10 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
-                                                            <span class="avatar-title bg-purple rounded-circle"><i class="material-icons icon-16pt">person_add</i></span>
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title bg-purple rounded-circle"><i
+                                                                    class="material-icons icon-16pt">person_add</i></span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -230,7 +243,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
                                                             <span class="avatar-title rounded-circle">JD</span>
                                                         </div>
                                                     </a>
@@ -245,7 +259,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
+                                                            alt="Avatar" class="avatar-img rounded-circle">
                                                     </div>
                                                 </div>
                                                 <div class="flex">
@@ -256,8 +271,10 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
-                                                            <span class="avatar-title bg-purple rounded-circle"><i class="material-icons icon-16pt">person_add</i></span>
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title bg-purple rounded-circle"><i
+                                                                    class="material-icons icon-16pt">person_add</i></span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -269,7 +286,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
                                                             <span class="avatar-title rounded-circle">JD</span>
                                                         </div>
                                                     </a>
@@ -284,7 +302,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
+                                                            alt="Avatar" class="avatar-img rounded-circle">
                                                     </div>
                                                 </div>
                                                 <div class="flex">
@@ -295,8 +314,10 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
-                                                            <span class="avatar-title bg-purple rounded-circle"><i class="material-icons icon-16pt">person_add</i></span>
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title bg-purple rounded-circle"><i
+                                                                    class="material-icons icon-16pt">person_add</i></span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -308,7 +329,8 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <a href="#">
-                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
                                                             <span class="avatar-title rounded-circle">JD</span>
                                                         </div>
                                                     </a>
@@ -322,15 +344,18 @@
 
                                         </div>
                                     </div>
-                                    <a href="javascript:void(0);" class="dropdown-item text-center navbar-notifications-menu__footer">View All</a>
+                                    <a href="javascript:void(0);"
+                                        class="dropdown-item text-center navbar-notifications-menu__footer">View All</a>
                                 </div>
                             </li>
                         </ul>
 
                         <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
                             <li class="nav-item dropdown">
-                                <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                                    <img src="assets/images/avatar/demi.png" class="rounded-circle" width="32" alt="Frontted">
+                                <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    data-caret="false">
+                                    <img src="assets/images/avatar/demi.png" class="rounded-circle" width="32"
+                                        alt="Frontted">
                                     <span class="ml-1 d-flex-inline">
                                         <span class="text-light">Adrian D.</span>
                                     </span>
@@ -371,7 +396,8 @@
                             <div class="flex">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb mb-0">
-                                        <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a></li>
+                                        <li class="breadcrumb-item"><a href="#"><i
+                                                    class="material-icons icon-20pt">home</i></a></li>
                                         <li class="breadcrumb-item">Apps</li>
                                         <li class="breadcrumb-item active" aria-current="page">Trello</li>
                                     </ol>
@@ -389,7 +415,8 @@
 
                     <div class="trello-container">
                         <div class="trello-board container page__container">
-                            <div class="trello-board__tasks" data-toggle="dragula" data-dragula-containers='["#trello-tasks-1", "#trello-tasks-2", "#trello-tasks-3", "#trello-tasks-4"]'>
+                            <div class="trello-board__tasks" data-toggle="dragula"
+                                data-dragula-containers='["#trello-tasks-1", "#trello-tasks-2", "#trello-tasks-3", "#trello-tasks-4"]'>
                                 <div class="card bg-light border">
                                     <div class="card-header card-header-sm bg-white">
                                         <h4 class="card-header__title">Todo (3)</h4>
@@ -404,10 +431,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add UI Buttons Page</strong> <span class="badge badge-light-gray ml-auto">OPEN</span></p>
+                                                        <strong>Add UI Buttons Page</strong> <span
+                                                            class="badge badge-light-gray ml-auto">OPEN</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -415,8 +445,10 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -432,10 +464,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Envato Item Presentation</strong> <span class="badge badge-success ml-auto">RESOLVED</span></p>
+                                                        <strong>Envato Item Presentation</strong> <span
+                                                            class="badge badge-success ml-auto">RESOLVED</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -443,16 +478,22 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2 avatar-group">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_michael-dam-258165-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_luke-porter-261779-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -470,10 +511,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add Trello App Page</strong> <span class="badge badge-warning ml-auto">NEED HELP</span></p>
+                                                        <strong>Add Trello App Page</strong> <span
+                                                            class="badge badge-warning ml-auto">NEED HELP</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -481,8 +525,10 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -515,10 +561,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add Trello App Page</strong> <span class="badge badge-danger ml-auto">HIGH</span></p>
+                                                        <strong>Add Trello App Page</strong> <span
+                                                            class="badge badge-danger ml-auto">HIGH</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -526,12 +575,16 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2 avatar-group">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_michael-dam-258165-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -549,10 +602,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add UI Alerts Page</strong> <span class="badge badge-light-gray ml-auto">OPEN</span></p>
+                                                        <strong>Add UI Alerts Page</strong> <span
+                                                            class="badge badge-light-gray ml-auto">OPEN</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -560,8 +616,10 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -594,10 +652,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add UI Modals Page</strong> <span class="badge badge-success ml-auto">RESOLVED</span></p>
+                                                        <strong>Add UI Modals Page</strong> <span
+                                                            class="badge badge-success ml-auto">RESOLVED</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -605,8 +666,10 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -639,10 +702,13 @@
                                             <div class="trello-board__tasks-item card shadow-none border">
                                                 <div class="p-3">
                                                     <p class="m-0 d-flex align-items-center">
-                                                        <strong>Add UI Avatars Page</strong> <span class="badge badge-warning ml-auto">NEED HELP</span></p>
+                                                        <strong>Add UI Avatars Page</strong> <span
+                                                            class="badge badge-warning ml-auto">NEED HELP</span>
+                                                    </p>
 
                                                     <p class="d-flex align-items-center mb-2">
-                                                        <i class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
+                                                        <i
+                                                            class="material-icons icon-16pt mr-2 text-muted">folder_open</i>
                                                         <span class="text-muted mr-3">Stack</span>
                                                         <i class="material-icons icon-16pt mr-2 text-muted">comment</i>
                                                         <span class="text-muted"><strong>28</strong> comments</span>
@@ -650,8 +716,10 @@
                                                     <div class="media align-items-center">
                                                         <div class="media-left mr-2">
 
-                                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
-                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                            <div class="avatar avatar-xs" data-toggle="tooltip"
+                                                                data-placement="top" title="Janell D.">
+                                                                <img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg"
+                                                                    alt="Avatar" class="avatar-img rounded-circle">
                                                             </div>
 
                                                         </div>
@@ -682,33 +750,46 @@
 
                         <div class="sidebar sidebar-mini sidebar-primary sidebar-left simplebar" data-simplebar>
                             <ul class="nav flex-column sidebar-menu mt-3" id="sidebar-mini-tabs" role="tablist">
-                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="Dashboards" data-placement="right" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm_dashboards" data-toggle="tab" role="tab" aria-controls="sm_dashboards" aria-selected="true">
+                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="Dashboards"
+                                    data-placement="right" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm_dashboards" data-toggle="tab" role="tab"
+                                        aria-controls="sm_dashboards" aria-selected="true">
                                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
                                         <span class="sidebar-menu-text">Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-menu-item active" data-toggle="tooltip" data-title="Apps" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm_apps" data-toggle="tab" role="tab" aria-controls="sm_apps" aria-selected="false">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
+                                <li class="sidebar-menu-item active" data-toggle="tooltip" data-title="Apps"
+                                    data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm_apps" data-toggle="tab" role="tab"
+                                        aria-controls="sm_apps" aria-selected="false">
+                                        <i
+                                            class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
                                         <span class="sidebar-menu-text">Apps</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-menu-item " data-toggle="tooltip" data-title="Pages" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm_pages" data-toggle="tab" role="tab" aria-controls="sm_pages">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
+                                <li class="sidebar-menu-item " data-toggle="tooltip" data-title="Pages"
+                                    data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm_pages" data-toggle="tab" role="tab"
+                                        aria-controls="sm_pages">
+                                        <i
+                                            class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
                                         <span class="sidebar-menu-text">Pages</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="UI Components" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm_components" data-toggle="tab" role="tab" aria-controls="sm_components">
+                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="UI Components"
+                                    data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm_components" data-toggle="tab" role="tab"
+                                        aria-controls="sm_components">
                                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">list</i>
                                         <span class="sidebar-menu-text">UI Components</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="Layouts" data-placement="right" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm_layouts" data-toggle="tab" role="tab" aria-controls="sm_layouts" aria-selected="false">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">view_compact</i>
+                                <li class="sidebar-menu-item" data-toggle="tooltip" data-title="Layouts"
+                                    data-placement="right" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm_layouts" data-toggle="tab" role="tab"
+                                        aria-controls="sm_layouts" aria-selected="false">
+                                        <i
+                                            class="sidebar-menu-icon sidebar-menu-icon--left material-icons">view_compact</i>
                                         <span class="sidebar-menu-text">Layouts</span>
                                     </a>
                                 </li>
@@ -770,7 +851,8 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item ">
-                                                <a class="sidebar-menu-button" data-toggle="collapse" href="#course_menu">
+                                                <a class="sidebar-menu-button" data-toggle="collapse"
+                                                    href="#course_menu">
                                                     <span class="sidebar-menu-text">Education</span>
                                                     <span class="ml-auto d-flex align-items-center">
                                                         <span class="sidebar-menu-toggle-icon"></span>
@@ -843,37 +925,44 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
-                                                <a class="sidebar-menu-button" data-toggle="collapse" href="#login_menu">
+                                                <a class="sidebar-menu-button" data-toggle="collapse"
+                                                    href="#login_menu">
                                                     <span class="sidebar-menu-text">Login</span>
                                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                                 </a>
                                                 <ul class="sidebar-submenu collapse" id="login_menu">
                                                     <li class="sidebar-menu-item">
                                                         <a class="sidebar-menu-button" href="login.html">
-                                                            <span class="sidebar-menu-text">Login / Background Image</span>
+                                                            <span class="sidebar-menu-text">Login / Background
+                                                                Image</span>
                                                         </a>
                                                     </li>
                                                     <li class="sidebar-menu-item">
                                                         <a class="sidebar-menu-button" href="login-centered-boxed.html">
-                                                            <span class="sidebar-menu-text">Login / Centered Boxed</span>
+                                                            <span class="sidebar-menu-text">Login / Centered
+                                                                Boxed</span>
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="sidebar-menu-item">
-                                                <a class="sidebar-menu-button" data-toggle="collapse" href="#signup_menu">
+                                                <a class="sidebar-menu-button" data-toggle="collapse"
+                                                    href="#signup_menu">
                                                     <span class="sidebar-menu-text">Sign Up</span>
                                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                                 </a>
                                                 <ul class="sidebar-submenu collapse" id="signup_menu">
                                                     <li class="sidebar-menu-item">
                                                         <a class="sidebar-menu-button" href="signup.html">
-                                                            <span class="sidebar-menu-text">Sign Up / Background Image</span>
+                                                            <span class="sidebar-menu-text">Sign Up / Background
+                                                                Image</span>
                                                         </a>
                                                     </li>
                                                     <li class="sidebar-menu-item">
-                                                        <a class="sidebar-menu-button" href="signup-centered-boxed.html">
-                                                            <span class="sidebar-menu-text">Sign Up / Centered Boxed</span>
+                                                        <a class="sidebar-menu-button"
+                                                            href="signup-centered-boxed.html">
+                                                            <span class="sidebar-menu-text">Sign Up / Centered
+                                                                Boxed</span>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -885,7 +974,9 @@
                                                 <div>60%</div>
                                             </div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -896,94 +987,109 @@
                                         <ul class="sidebar-menu" id="components_menu">
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-buttons.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">mouse</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">mouse</i>
                                                     <span class="sidebar-menu-text">Buttons</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-alerts.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">notifications</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">notifications</i>
                                                     <span class="sidebar-menu-text">Alerts</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-avatars.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person</i>
                                                     <span class="sidebar-menu-text">Avatars</span>
                                                     <span class="badge badge-primary ml-auto">NEW</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-modals.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">aspect_ratio</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">aspect_ratio</i>
                                                     <span class="sidebar-menu-text">Modals</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-charts.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pie_chart_outlined</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">pie_chart_outlined</i>
                                                     <span class="sidebar-menu-text">Charts</span>
                                                     <span class="badge badge-warning ml-auto">PRO</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-icons.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">brush</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">brush</i>
                                                     <span class="sidebar-menu-text">Icons</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-forms.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">text_format</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">text_format</i>
                                                     <span class="sidebar-menu-text">Forms</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-range-sliders.html">
                                                     <!-- tune or low_priority or linear_scale or space_bar or swap_calls -->
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">tune</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">tune</i>
                                                     <span class="sidebar-menu-text">Range Sliders</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-datetime.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">event_available</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">event_available</i>
                                                     <span class="sidebar-menu-text">Time &amp; Date</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-tables.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dns</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dns</i>
                                                     <span class="sidebar-menu-text">Tables</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-tabs.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">tab</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">tab</i>
                                                     <span class="sidebar-menu-text">Tabs</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-loaders.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">refresh</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">refresh</i>
                                                     <span class="sidebar-menu-text">Loaders</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-drag.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">control_point</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">control_point</i>
                                                     <span class="sidebar-menu-text">Drag &amp; Drop</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-pagination.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">last_page</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">last_page</i>
                                                     <span class="sidebar-menu-text">Pagination</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item">
                                                 <a class="sidebar-menu-button" href="mini-ui-vector-maps.html">
-                                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">location_on</i>
+                                                    <i
+                                                        class="sidebar-menu-icon sidebar-menu-icon--left material-icons">location_on</i>
                                                     <span class="sidebar-menu-text">Vector Maps</span>
                                                 </a>
                                             </li>
@@ -1068,11 +1174,11 @@
     <script src="assets/js/dragula.js"></script>
 
     <script>
-        (function() {
+        (function () {
             'use strict';
 
             // ENABLE sidebar menu tabs
-            $('#sidebar-mini-tabs [data-toggle="tab"]').on('click', function(e) {
+            $('#sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
                 e.preventDefault()
                 $(this).tab('show')
             })

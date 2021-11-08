@@ -4,6 +4,8 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const db = require('../models');
 
+router.use('/public', express.static(__dirname + '/public'));
+
 router.get('/signup_login', (req, res) => {
 
     //render out our markupA
@@ -12,7 +14,7 @@ router.get('/signup_login', (req, res) => {
 
 router.post('/signup_login', async (req, res) => {
 
-    // on success navigate to login page 
+    // on success navigate to login page
     // on error navigate to error
 
     try {
