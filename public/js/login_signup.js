@@ -1,22 +1,42 @@
-$(document).ready(() => {
-  $(".login-form").hide();
-  $(".login").css("background", "none");
+const loginForm = document.querySelector('.login-form');
+const loginButton = document.querySelector('.login');
+const signupForm = document.querySelector('.signup-form');
+const signupButton = document.querySelector('.signup');
+const formButton = document.querySelector('.btn');
+const formInput = document.querySelector('.input');
 
-  $(".login").click(function () {
-    $(".signup-form").hide();
-    $(".login-form").show();
-    $(".signup").css("background", "none");
-    $(".login").css("background", "#fff");
-  });
+signupButton.classList.add('active');
+loginButton.classList.add('inactive');
+signupForm.style.display = 'block';
+loginForm.style.display = 'none';
 
-  $(".signup").click(function () {
-    $(".signup-form").show();
-    $(".login-form").hide();
-    $(".login").css("background", "none");
-    $(".signup").css("background", "#fff");
-  });
+function ready() {
+  if (document.readyState !== 'loading') {
+    loginButton.addEventListener('click', () => {
+      signupForm.style.display = 'none';
+      signupButton.classList.remove('active');
+      signupButton.classList.add('inactive');
+      
+      loginForm.style.display = 'block';
+      loginButton.classList.add('active');
+    });
+    
+    signupButton.addEventListener('click', () => {
+      signupForm.style.display = 'block';
+      signupButton.classList.remove('inactive');
+      signupButton.classList.add('active');
+      
+      loginForm.style.display = 'none';
+      loginButton.classList.remove('active');
+      loginButton.classList.add('inactive');
+    });
+    
+    formButton.addEventListener('click', () => {
+      formInput.value = '';
+    });
+  } else {
+    console.log('not ready');
+  }
+}
 
-  $(".btn").click(function () {
-    $(".input").val("");
-  });
-});
+ready();

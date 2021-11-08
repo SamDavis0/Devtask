@@ -2,25 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>
+        <%= title; %>
+    </title>
 </head>
 
 <body>
-  <p>homepage (index.ejs)</p>
-  <button id="test">click</button>
-
-  <li class="tab active"><a href="/login_signup">Sign Up/Login</a></li>
-
-
-<script>
-  document.getElementById('test').addEventListener('click', function() {
-    console.log('clicked');
-  });
-</script>
+    <p>homepage (index.ejs)</p>
+    <li class="tab active">
+        <a href="/login_signup">Sign Up/Login</a>
+    </li>
 </body>
 </html>
