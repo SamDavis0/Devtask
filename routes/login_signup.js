@@ -1,22 +1,22 @@
 const express = require('express');
 const passport = require('passport');
+const bcrypt = require('bcryptjs');
+const db = require('../models');
 
 const router = express.Router();
 
 router.use('/public', express.static(__dirname + '/public'));
 
-router.post('/login_signup', passport.authenticate('local', {
+router.get('/login_signup', (req, res) => {
+  res.render('login_signup', { title: 'Devtask' });
+});
+
+router.post('/login', passport.authenticate('local', {
   successRedirect: '/projects',
   failureRedirect: '/login_signup',
 }));
 
-router.get('/login_signup', (req, res) => {
-  
-  //render out our markupA
-  res.render('login_signup', { title: 'DELLO', error: null });
-});
-
-router.post('/login_signup', async (req, res) => {
+router.post('/signup', async (req, res) => {
   
   // on success navigate to login page
   // on error navigate to error
@@ -37,15 +37,17 @@ router.post('/login_signup', async (req, res) => {
       email: email,
       password: password,
     });
+    throw Error
     
-    
-    res.redirect('/projects');
+    res.redirect('/login_signup');
   } catch (error) {
     console.log(error);
-    res.render('index', {
-      error: 'error: can\'t register this username',
-      title: 'Express',
-    });
+    req.flash('error', 'Sign up failed');
+    res.redirect('/login_signup');
+    // res.render('login_signup', {
+    //   error: 'error: can\'t register this username',
+    //   title: 'Devtask'
+    // });
   }
 });
 
