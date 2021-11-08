@@ -4,6 +4,8 @@ const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const path = require('path');
+const flash = require('express-flash')
+
 
 require('./auth/passport-config')(passport);
 const port = 3000;
@@ -26,6 +28,7 @@ app.use(cookieSession({
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 //routes
 
