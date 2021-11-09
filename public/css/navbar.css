@@ -1,5 +1,5 @@
 .navbar-wrapper {
-  z-index: 4;
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
 
 .menu-container {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   overflow: hidden;
   position: fixed;
@@ -86,4 +86,17 @@
 .menu-item:hover {
   transform: translateX(-5px);
   opacity: 1;
+}
+
+/* toggle classes */
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  display: block;
+  transform: translateX(0);
 }
