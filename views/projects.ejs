@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel='stylesheet' href='public/css/projects.css'>
 
     <title>Projects</title>
@@ -21,21 +22,19 @@
                 </div>
             </div>
             <div class='project-tasks'>
-                <div class='project-column dropzone vh-100' id="todo">
+                <div class='project-column dropzone vh-100' id="todo" data-status="0">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>To Do</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
                     </div>
-                    <% for (let i = 0; i < tasks.length; i++) { %>
-                        <div class='task' draggable='true'>
-                            <div class='task__tags'><span class='task__tag task__tag--html'><%=  %> </span>
+                    <% for (let i = 0; i < todos.length; i++) { %>
+                        <div class='task' draggable='true' data-task-id="<%= todos[i].id %>">
+                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
                                 <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
                             </div>
-                            <p><%= tasks[i].description %> </p>
+                            <p><%= todos[i].description %> </p>
                             <div class='task__stats'>
-                                <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                                <span><i class="fas fa-comment"></i>4</span>
-                                <span><i class="fas fa-paperclip"></i>8</span>
+                                <span><%= todos[i].createdAt %> </span>
                                 <span class='task__owner'></span>
                             </div>
                         </div>
@@ -43,50 +42,49 @@
 
                     
                 </div>
-                <div class='project-column dropzone' id="inprogress">
+                <div class='project-column dropzone vh-100' id="inprogress" data-status="1">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>In Progress</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
                     </div>
 
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--python'>Python</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
+                    <% for (let i = 0; i < inprogress.length; i++) { %>
+                        <div class='task' draggable='true' data-task-id="<%= inprogress[i].id %>">
+                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
+                                <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                            <p><%= inprogress[i].description %> </p>
+                            <div class='task__stats'>
+                                <span><%= inprogress[i].createdAt %> </span>
+                                <span class='task__owner'></span>
+                            </div>
                         </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus nulla inventore atque, non consectetur veritatis iusto reiciendis fuga voluptas officia aliquam molestias, sint, ab omnis magnam expedita. Atque, deserunt cum?</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>12</span>
-                            <span><i class="fas fa-paperclip"></i>11</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
-
-                    <div class='task' draggable='true'>
-                        <div class='task__tags'><span class='task__tag task__tag--html'>CSS</span>
-                            <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor quod saepe soluta. Sit pariatur optio, ea ullam consequuntur quo ipsam amet odit, quas suscipit debitis dolor et voluptatum. Dignissimos, sequi.</p>
-                        <div class='task__stats'>
-                            <span><time datetime="2021-11-25T20:00:00"><i class="fas fa-flag"></i>Nov 25</time></span>
-                            <span><i class="fas fa-comment"></i>4</span>
-                            <span><i class="fas fa-paperclip"></i>8</span>
-                            <span class='task__owner'></span>
-                        </div>
-                    </div>
+                    <% } %>
 
                 </div>
-                <div class='project-column dropzone' id="done">
+                <div class='project-column dropzone vh-100' id="done" data-status="2">
                     <div class='project-column-heading'>
                         <h2 class='project-column-heading__title'>Done</h2>
                         <button class='project-column-heading__options'><i class="fas fa-ellipsis-h"></i></button>
                     </div>
+                    <% for (let i = 0; i < done.length; i++) { %>
+                        <div class='task' draggable='true' data-task-id="<%= done[i].id %>">
+                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
+                                <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                            <p><%= done[i].description %> </p>
+                            <div class='task__stats'>
+                                <span><%= done[i].createdAt %> </span>
+                                <span class='task__owner'></span>
+                            </div>
+                        </div>
+                    <% } %>
                 </div>
-                <div class='project-column dropzone' id="newcard">
+                <div class='project-column dropzone vh-100' id="newcard">
                     <div><h1>Create Task</h1>
-                        <form>
+                        <form method="POST" action="/projects" onsubmit="return false">
                             <div class="input-group">
-                                <textarea name="task" class="form-control"
+                                <textarea name="taskValue" class="form-control"
                                 placeholder="Enter todo item" 
                                 aria-label="With textarea"></textarea>
 
@@ -103,18 +101,16 @@
         <aside class='task-details'>
             <div class='tag-progress'>
                 <h2>Task Progress</h2>
-                <div class='tag-progress'>
-                    <p>Python<span>3/10</span></p>
-                    <progress class="progress progress--python" max="8" value="3"> 3</progress>
-                </div>
-                <div class='tag-progress'>
-                    <p>HTML<span>7/10</span></p>
-                    <progress class="progress progress--html" max="10" value="6"> 6</progress>
-                </div>
-                <div class='tag-progress'>
+                <% for (let i = 0; i < users.length; i++) { %>
+                    <div class='tag-progress'>
+                        <p><%= users[i].username %><span>3/10</span></p>
+                        <progress class="progress progress--python" max="8" value="3"> 3</progress>
+                    </div>
+                <% } %> 
+                <!-- <div class='tag-progress'>
                     <p>CSS<span>5/9</span></p>
                     <progress class="progress progress--css" max="7" value="2"> 2</progress>
-                </div>
+                </div> -->
             </div>
             <div class='task-activity'>
                 <h2>Recent Activity</h2>
@@ -154,6 +150,7 @@
             </div>
         </aside>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="public/js/movingcards.js"></script>
     <script src="public/js/card.js"></script>
 </body>
