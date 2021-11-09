@@ -64,9 +64,6 @@ buttons.forEach(button => {
                 taskId: taskNode.dataset.taskId,
             }
         })
-        // .then(() => {
-        //     location.reload();
-        // })
     })
 });
 
