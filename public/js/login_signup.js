@@ -5,12 +5,13 @@ const signupButton = document.querySelector('.signup');
 const formButton = document.querySelector('.btn');
 const formInput = document.querySelector('.input');
 
-signupButton.classList.add('active');
-loginButton.classList.add('inactive');
-signupForm.style.display = 'block';
-loginForm.style.display = 'none';
 
 function ready() {
+  signupButton.classList.add('active');
+  loginButton.classList.add('inactive');
+  signupForm.style.display = 'block';
+  loginForm.style.display = 'none';
+  
   if (document.readyState !== 'loading') {
     loginButton.addEventListener('click', () => {
       signupForm.style.display = 'none';

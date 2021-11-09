@@ -1,48 +1,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login/signup</title>
-    <link rel='stylesheet' href='/public/css/login_signup.css'>
+    <%- include('partials/meta.ejs') %>
+    <link rel='stylesheet' href='public/vendor/bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='public/vendor/fontawesome/css/fontawesome.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/sol4wcr.css" />
+    <link rel='stylesheet' href='public/css/index.css'>
     <script src='public/js/login_signup.js' type='module'></script>
+    <title>login/signup</title>
 </head>
 
 <body>
-    <%= messages.error %> 
-        <div class="wrapper">
-            <div class="container">
-                <div class="signup">Sign Up</div>
-                <div class="login">Log In</div>
-                    <form action="/signup" method="post">
-                        <div class="signup-form">
-                            <input name="email" type="text" placeholder="Your Email Address" class="input">
-                            <br />
-                            <input name="username" type="text" placeholder="Choose a Username" class="input">
-                            <br />
-                            <input name="password" type="password" placeholder="Choose a Password" class="input">
-                            <br />
-                            <button type="submit" class="btn">Create account</button>
-                            <!-- <div class="btn">Create account</div> -->
-                        </div>
-                    </form>
+    <%- include('partials/navbar.ejs') %>
+    <%= messages.error; %>
+    <div class="login-wrapper">
+        <div class="custom-margin-top login-signup-container">
+            <div class="signup">Sign Up</div>
+            <div class="login">Log In</div>
+            <form action="/signup" method="post">
+                <div class="signup-form">
+                    <input name="email" type="text" placeholder="Your Email Address" class="input">
+                    <br />
+                    <input name="username" type="text" placeholder="Choose a Username" class="input">
+                    <br />
+                    <input name="password" type="password" placeholder="Choose a Password" class="input">
+                    <br />
+                    <button type="submit" class="btn">Create account</button>
+                    <!-- <div class="btn">Create account</div> -->
+                </div>
+            </form>
 
-                    <form action="/login" method="post">
-                        <div class="login-form">
-                            <input name="username" type="text"placeholder="Username" class="input">
-                            <br />
-                            <input name="password" type="password" placeholder="Password" class="input">
-                            <br />
-                            <button type="submit" class="btn">Log in</button>
-                            <!-- <div class="btn">log in</div> -->
-                            <!-- <span><a href="#">I forgot my username or password.</a></span> -->
-                        </div>
-                    </form>
+            <form action="/login" method="post">
+                <div class="login-form">
+                    <input name="username" type="text" placeholder="Username" class="input">
+                    <br />
+                    <input name="password" type="password" placeholder="Password" class="input">
+                    <br />
+                    <button type="submit" class="btn">Log in</button>
+                    <!-- <div class="btn">log in</div> -->
+                    <!-- <span><a href="#">I forgot my username or password.</a></span> -->
+                </div>
+            </form>
 
-            </div>
         </div>
-    
+    </div>
+    <script src='public/vendor/fontawesome/js/all.min.js'></script>
+    <script src='public/js/navbar.js' type='module'></script>
 
 </body>
 
