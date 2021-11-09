@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const path = require('path');
-const flash = require('express-flash')
+const flash = require('express-flash');
 
 
 require('./auth/passport-config')(passport);
@@ -13,17 +12,6 @@ const port = 3000;
 app.use('/public', express.static(__dirname + '/public'));
 
 // app.use(express.static('public'));
-app.use(
-  helmet({
-      contentSecurityPolicy: {
-          directives: {
-              defaultSrc: ["'self'"],
-              scriptSrc: ["'self'", "https://maps.googleapis.com", "https://www.google.com", "https://ajax.googleapis.com"],
-              styleSrc: ["'self'", "fonts.googleapis.com", "https://cdn.jsdelivr.net"],
-          }
-      },
-  })
-);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
