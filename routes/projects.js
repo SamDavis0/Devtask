@@ -18,7 +18,7 @@ router.get('/projects', auth, async (req, res) => {
         let done = []
 
         tasks.forEach(task => {
-            switch(task.status){
+            switch (task.status) {
                 case 0:
                     todos.push(task)
                     break
@@ -54,15 +54,25 @@ router.post('/projects', async (req, res) => {
         description,
         status: 0
     })
-    res.sendStatus(204)
+    res.redirect('/projects')
 })
 
-router.put('/projects', async (req,res) => {
+router.put('/projects', async (req, res) => {
     let taskId = req.body.taskId
     let status = req.body.status
-    await db.tasks.update({status}, {where: {id: taskId}})
+    await db.tasks.update({ status }, { where: { id: taskId } })
+    res.sendStatus(200)
 })
 
+router.delete('/projects', async (req, res) => {
 
+    let taskId = req.body.taskId
+    await db.tasks.destroy({
+        where: {
+            id: taskId
+        }
+    });
+    res.sendStatus(200)
+})
 
 module.exports = router;

@@ -51,7 +51,55 @@ document.addEventListener("drop", function( event ) {
 }, false);
 
 
+let buttons = document.querySelectorAll('.deletetask')
+buttons.forEach(button => {
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        let taskNode = event.target.parentNode
+        taskNode.remove()
+        $.ajax({
+            type: "DELETE",
+            url: `/projects`,
+            data: {
+                taskId: taskNode.dataset.taskId,
+            }
+        })
+        // .then(() => {
+        //     location.reload();
+        // })
+    })
+});
 
+
+
+// del.addEventListener('click', async (e) => {
+    
+//     if(e.target.className === 'deletetask'){
+//         let primaryKey = e.target.id; 
+
+//         console.log(primaryKey);
+
+//         // let result = await fetch(`/todos/${primaryKey}`, {
+//         //     method: "DELETE", 
+//         //     headers: headers
+//         // })
+//         router.delete('/projects', async (res,req) => {
+//             let taskId = req.body.taskId
+//             await db.tasks.destroy({
+//                 where: {
+//                     id: taskId
+//                 }
+//             });
+//         })
+        
+//     }
+// del.addEventListener('click', async (e) => {
+//     function deletetask(id) {
+//         return tasks.destroy({
+//          where: { id: taskid }
+//         })
+//        }
+//         }
 
 // document.addEventListener('DOMContentLoaded', (event) => {
 
