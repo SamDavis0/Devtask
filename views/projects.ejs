@@ -14,12 +14,12 @@
         <main class='project'>
             <div class='project-info'>
                 <h1>Project</h1>
-                <div class='project-members'>
+                <!-- <div class='project-members'>
                     <span></span>
                     <span></span>
                     <span></span>
                     <button class='project-members__add'>Add Participant</button>
-                </div>
+                </div> -->
             </div>
             <div class='project-tasks'>
                 <div class='project-column dropzone vh-100' id="todo" data-status="0">
@@ -36,7 +36,9 @@
                             <div class='task__stats'>
                                 <span><%= todos[i].createdAt %> </span>
                                 <span class='task__owner'></span>
+                                
                             </div>
+                            <button class="deletetask" >delete</button>
                         </div>
                     <% } %> 
 
@@ -57,7 +59,9 @@
                             <div class='task__stats'>
                                 <span><%= inprogress[i].createdAt %> </span>
                                 <span class='task__owner'></span>
+                                
                             </div>
+                            <button class="deletetask" >delete</button>
                         </div>
                     <% } %>
 
@@ -76,16 +80,18 @@
                             <div class='task__stats'>
                                 <span><%= done[i].createdAt %> </span>
                                 <span class='task__owner'></span>
+                                
                             </div>
+                            <button class="deletetask" >delete</button>
                         </div>
                     <% } %>
                 </div>
                 <div class='project-column dropzone vh-100' id="newcard">
                     <div><h1>Create Task</h1>
-                        <form method="POST" action="/projects" onsubmit="return false">
+                        <form method="POST" action="/projects">
                             <div class="input-group">
                                 <textarea name="taskValue" class="form-control"
-                                placeholder="Enter todo item" 
+                                placeholder="Enter todo item"
                                 aria-label="With textarea"></textarea>
 
                                 <div class="input-group-append">
