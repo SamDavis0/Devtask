@@ -41,8 +41,6 @@
                             <button class="deletetask" >delete</button>
                         </div>
                     <% } %> 
-
-                    
                 </div>
                 <div class='project-column dropzone vh-100' id="inprogress" data-status="1">
                     <div class='project-column-heading'>
@@ -112,7 +110,7 @@
                         <p><%= users[i].username %><span><%= tasks.length %> </span></p>
                         <progress class="progress progress--python" max="8" value="<%= tasks.length %>"><%= tasks.length %></progress>
                     </div>
-                <% } %> 
+                <% } %>
                 <!-- <div class='tag-progress'>
                     <p>CSS<span>5/9</span></p>
                     <progress class="progress progress--css" max="7" value="2"> 2</progress>

@@ -12,9 +12,17 @@
 </head>
 
 <body>
-    <p>homepage (index.ejs)</p>
-    <li class="tab active">
-        <a href="/login_signup">Sign Up/Login</a>
-    </li>
+  <%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <h1 style="margin-top: 0;">Dello</h1>
+        <h3>A project management app by developers for developers</h3>
+        <li class="tab active">
+            <a href="/login_signup">Get started</a>
+        </li>
+      <div id=stock-img>
+        <img src="/public/images/cartoon-recruiter-company-job-employment.jpg" alt='Employs gather around a desk and cheer.'>
+      </div>
+    </div>
+  <%- include('partials/footer.ejs') %>
 </body>
 </html>
