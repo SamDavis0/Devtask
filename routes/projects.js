@@ -4,7 +4,6 @@ const auth = require('../auth');
 const db = require('../models');
 
 
-
 router.use('/public', express.static(__dirname + '/public'));
 
 router.get('/projects', auth, async (req, res) => {
@@ -37,12 +36,12 @@ router.get('/projects', auth, async (req, res) => {
             error: "error: can't register this username",
             title: "Express",
             projects: projects,
+            tasks: tasks,
             todos: todos,
             inprogress: inprogress,
             done: done,
             users: users
         })
-        // console.log(JSON.stringify(projects));
     } catch (error) {
         console.log(error);
     }
@@ -63,28 +62,6 @@ router.put('/projects', async (req,res) => {
     let status = req.body.status
     await db.tasks.update({status}, {where: {id: taskId}})
 })
-
-// router.post('/login', (req, res) => {
-
-
-
-//     // scrape information off of header 
-//     // check if user is in db 
-//     // password is correct 
-//     // compare encrypted passwords 
-//     // place data on session so login can persisted
-
-// })
-
-// router.post('/projects', (req, res) => {
-
-// res.render()
-// })
-
-// router.post('/login', passport.authenticate('local', {
-//     successRedirect: '/projects', 
-//     failureRedirect: '/login'
-// }))
 
 
 

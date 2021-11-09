@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <main class='project'>
             <div class='project-info'>
-                <h1><%= projects[0].project_name %> </h1>
+                <h1>Project</h1>
                 <div class='project-members'>
                     <span></span>
                     <span></span>
@@ -29,7 +29,7 @@
                     </div>
                     <% for (let i = 0; i < todos.length; i++) { %>
                         <div class='task' draggable='true' data-task-id="<%= todos[i].id %>">
-                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
+                            <div class='task__tags'><span class='task__tag task__tag--html'><%= users.username %> </span>
                                 <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
                             </div>
                             <p><%= todos[i].description %> </p>
@@ -50,7 +50,7 @@
 
                     <% for (let i = 0; i < inprogress.length; i++) { %>
                         <div class='task' draggable='true' data-task-id="<%= inprogress[i].id %>">
-                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
+                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users.username %> </span>
                                 <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
                             </div>
                             <p><%= inprogress[i].description %> </p>
@@ -69,7 +69,7 @@
                     </div>
                     <% for (let i = 0; i < done.length; i++) { %>
                         <div class='task' draggable='true' data-task-id="<%= done[i].id %>">
-                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users[i].username %> </span>
+                            <div class='task__tags'><span class='task__tag task__tag--html'>  <%= users.username %> </span>
                                 <button class='task__options'><i class="fas fa-ellipsis-h"></i></button>
                             </div>
                             <p><%= done[i].description %> </p>
@@ -103,8 +103,8 @@
                 <h2>Task Progress</h2>
                 <% for (let i = 0; i < users.length; i++) { %>
                     <div class='tag-progress'>
-                        <p><%= users[i].username %><span>3/10</span></p>
-                        <progress class="progress progress--python" max="8" value="3"> 3</progress>
+                        <p><%= users[i].username %><span><%= tasks.length %> </span></p>
+                        <progress class="progress progress--python" max="8" value="<%= tasks.length %>"><%= tasks.length %></progress>
                     </div>
                 <% } %> 
                 <!-- <div class='tag-progress'>
@@ -112,7 +112,7 @@
                     <progress class="progress progress--css" max="7" value="2"> 2</progress>
                 </div> -->
             </div>
-            <div class='task-activity'>
+            <!-- <div class='task-activity'>
                 <h2>Recent Activity</h2>
                 <ul>
                     <li>
@@ -147,7 +147,7 @@
                     </li>
 
                 </ul>
-            </div>
+            </div> -->
         </aside>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
