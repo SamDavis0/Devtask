@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="https://use.typekit.net/sol4wcr.css" />
     <link rel='stylesheet' href='public/css/index.css'>
     <script src='public/js/login_signup.js' type='module'></script>
-    <title>login/signup</title>
+    <title>DELLO</title>
 </head>
 
 <body>
     <%- include('partials/navbar.ejs') %>
-    <%= messages.error; %>
+
     <div class="login-wrapper">
         <div class="custom-margin-top login-signup-container">
             <div class="signup">Sign Up</div>
             <div class="login">Log In</div>
-            <form action="/login_signup" method="post">
+            <form action="/signup" method="post">
                 <div class="signup-form">
                     <input name="email" type="text" placeholder="Your Email Address" class="input">
                     <br />
@@ -30,7 +30,7 @@
                 </div>
             </form>
 
-            <form action="/login_signup" method="post">
+            <form action="/login" method="post">
                 <div class="login-form">
                     <input name="username" type="text" placeholder="Username" class="input">
                     <br />

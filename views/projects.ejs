@@ -4,7 +4,6 @@
     <%- include('partials/meta.ejs') %>
     <link rel="stylesheet" href="https://use.typekit.net/sol4wcr.css" />
     <link rel='stylesheet' href='public/css/index.css'>
-    <script src="public/js/movingcards.js"></script>
     <title>Projects</title>
 </head>
 <body>
@@ -37,7 +36,7 @@
                                 <span class='task__owner'></span>
                                 
                             </div>
-                            <button class="deletetask" >delete</button>
+                            <button class="deletetask">delete</button>
                         </div>
                     <% } %>
 
@@ -60,7 +59,7 @@
                                 <span class='task__owner'></span>
                                 
                             </div>
-                            <button class="deletetask" >delete</button>
+                            <button class="deletetask">delete</button>
                         </div>
                     <% } %>
 
@@ -82,7 +81,7 @@
                                 <span class='task__owner'></span>
                                 
                             </div>
-                            <button class="deletetask" >delete</button>
+                            <button class="deletetask">delete</button>
                         </div>
                     <% } %>
                 </div>
@@ -91,12 +90,8 @@
                         <form method="POST" action="/projects">
                             <div class="input-group">
                                 <textarea name="taskValue" class="form-control"
-
                                           placeholder="Enter todo item"
                                           aria-label="With textarea"></textarea>
-
-                                placeholder="Enter todo item"
-                                aria-label="With textarea"></textarea>
 
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary h-100" type="submit"
@@ -161,10 +156,12 @@
             </div> -->
         </aside>
     </div>
-    <!--    <script src='public/vendor/jquery-3.6.0.min.js'></script>-->
+
+    <script src='public/vendor/jquery-3.6.0.min.js'></script>
     <script src='public/vendor/fontawesome/js/all.min.js'></script>
     <script src='public/vendor/bootstrap/js/bootstrap.min.js'></script>
     <script src='public/js/navbar.js' type='module'></script>
+    <script src="public/js/movingcards.js"></script>
 
 </body>
 </html>
